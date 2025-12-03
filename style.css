@@ -1,4 +1,7 @@
-
+body {
+    margin: 0;
+    background-color: black;
+}
 
 @font-face {
     font-family: myFont;
@@ -11,12 +14,14 @@
 .container {
  position: relative;
     width: 1000px;
-        
+    height: 100%;
+    margin: 0 auto; /*centers div*/
+    
 }
 
 img[name='bgimage']{
     width: 40%;
-    height: 750px;
+    height: 100vh;
 }
 
 img[name='lupa'] {
@@ -37,7 +42,7 @@ img[name='lupa'] {
     background: black;
     opacity: 0.5;
     color: white;
-    top: 10.5rem;
+    top: 10.4rem;
     font-family: myFont, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
     
@@ -60,12 +65,13 @@ p,
 label,
 .text {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
     font-size: .8em;
 }
 
 label{
     font-size: .6em;
+    font-weight: bold;
+    color: rgb(126, 120, 120);
 }
 
 input:focus {
@@ -74,17 +80,14 @@ input:focus {
     border: 1px solid rgb(69, 69, 180);
     box-shadow: 1px 1px 3px rgb(65, 65, 83) ;
 
-   
 }
 
 input {
-    margin-bottom: 10px;
+    
     border: 1px solid #dfdcc8;
     border-radius: 5px;
-    padding: 4px;
+    padding: .4rem;
 }
-
-
 
 input[type='password']:invalid {
 
@@ -97,8 +100,8 @@ border: 1px solid red;
     top: 0;
     right: 0;
     width: 60%;
-    height: 850px;
-    background-color: antiquewhite;
+    height: 100vh;
+    background-color: rgb(245, 242, 237);
     
 }
 
@@ -115,15 +118,20 @@ border: 1px solid red;
 
 form {
     
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2rem;
     background-color: white;
-    padding: 3rem 2rem 2rem 2rem;
+    padding: 2rem;
+    box-shadow: 0 6px 3px -3px rgb(196, 190, 190);
+}
+
+.field {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    flex-wrap: wrap;
-    height: 150px;
-
-}                       
+    margin-top: 1.3rem;
+    flex: 1 1 250px; /* grow, shrink, basis */
+}
 
 .footer {
     padding: 2em 1em;
@@ -135,10 +143,15 @@ button {
     font-weight: bolder;
     padding: 1em 4rem;
     border-radius: 5px;
-    background-color: rgb(107, 65, 31);
+    background-color: rgb(199, 154, 117);
     color: white;
     border: none;
+    cursor: pointer;
 
+}
+
+button + p {
+    font-size: .9em;
 }
 
 a {
